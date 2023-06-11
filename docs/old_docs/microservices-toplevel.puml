@@ -1,0 +1,8 @@
+@startuml
+
+[Order] - [Food]
+[Food] -- [User]
+[Auth] - [User]
+
+footer Microservices architecture UML diagram
+@enduml

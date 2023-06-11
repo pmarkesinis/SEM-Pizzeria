@@ -1,0 +1,1952 @@
+{
+	"info": {
+		"_postman_id": "42c6589e-853d-421c-8e68-31974e597172",
+		"name": "SEMProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19701845"
+	},
+	"item": [
+		{
+			"name": "OrderWorkflow",
+			"item": [
+				{
+					"name": "SaveIngredients",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5OWYwYTBjZi05ZDNjLTRmMjktOWExNi00YWEyZjNmZjM5ZmEiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE4NDE4MjksImlhdCI6MTY3MTc1NTQyOX0.aIf43LHlJMdQIVBPZgibHu5yMgBQh-4v2B3Y1s_0NMtE4Bm3wUy4KIB9ND8jH2SRui0Zn8lKVQ54s2UWBqu-kA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ingredient\" : {\r\n        \"name\" : \"black_olive\",\r\n        \"price\": 0.5,\r\n        \"allergens\":[]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/ingredient/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"ingredient",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SaveIngredientsErrors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhNDBlMTYwZi0yOTJhLTQxNzMtYWJlNC0xMDY3YmZiODBjZTciLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE4MzcxODUsImlhdCI6MTY3MTc1MDc4NX0.tuEZIKgqgDv7cYm6NYbXiEloUFJfw1vc0XrzsyXxocu3pj9FxFt0HCNPoKX1lXpJa0zDZ-_LSfbximfW2DWstQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ingredient\" : {\r\n        \"name\" : \"black_olive\",\r\n        \"price\": 0.5,\r\n        \"allergens\": []\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/ingredient/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"ingredient",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateIngredients",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5OWYwYTBjZi05ZDNjLTRmMjktOWExNi00YWEyZjNmZjM5ZmEiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE4NDE4MjksImlhdCI6MTY3MTc1NTQyOX0.aIf43LHlJMdQIVBPZgibHu5yMgBQh-4v2B3Y1s_0NMtE4Bm3wUy4KIB9ND8jH2SRui0Zn8lKVQ54s2UWBqu-kA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"ingredient\" : {\r\n        \"name\" : \"tomato\",\r\n        \"price\": 0.5,\r\n        \"allergens\":[]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/ingredient/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"ingredient",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateIngredientsErrors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhNDBlMTYwZi0yOTJhLTQxNzMtYWJlNC0xMDY3YmZiODBjZTciLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE4MzcxODUsImlhdCI6MTY3MTc1MDc4NX0.tuEZIKgqgDv7cYm6NYbXiEloUFJfw1vc0XrzsyXxocu3pj9FxFt0HCNPoKX1lXpJa0zDZ-_LSfbximfW2DWstQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 0,\r\n    \"ingredient\" : {\r\n        \"name\" : \"black_olive\",\r\n        \"price\": 0.5,\r\n        \"allergens\":[]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/ingredient/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"ingredient",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetIngredients",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5OWYwYTBjZi05ZDNjLTRmMjktOWExNi00YWEyZjNmZjM5ZmEiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE4NDE4MjksImlhdCI6MTY3MTc1NTQyOX0.aIf43LHlJMdQIVBPZgibHu5yMgBQh-4v2B3Y1s_0NMtE4Bm3wUy4KIB9ND8jH2SRui0Zn8lKVQ54s2UWBqu-kA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/ingredient/extraToppings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"ingredient",
+								"extraToppings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SaveRecipe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhNDBlMTYwZi0yOTJhLTQxNzMtYWJlNC0xMDY3YmZiODBjZTciLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE4MzcxODUsImlhdCI6MTY3MTc1MDc4NX0.tuEZIKgqgDv7cYm6NYbXiEloUFJfw1vc0XrzsyXxocu3pj9FxFt0HCNPoKX1lXpJa0zDZ-_LSfbximfW2DWstQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"recipe\": {\r\n        \"name\": \"test\",\r\n        \"baseToppings\": [1],\r\n        \"basePrice\": 8.0\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/recipe/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"recipe",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Recipe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhNDBlMTYwZi0yOTJhLTQxNzMtYWJlNC0xMDY3YmZiODBjZTciLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE4MzcxODUsImlhdCI6MTY3MTc1MDc4NX0.tuEZIKgqgDv7cYm6NYbXiEloUFJfw1vc0XrzsyXxocu3pj9FxFt0HCNPoKX1lXpJa0zDZ-_LSfbximfW2DWstQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":3,\r\n    \"recipe\": {\r\n        \"id\": 3,\r\n        \"name\": \"test\",\r\n        \"baseToppings\": [\r\n            1\r\n        ],\r\n        \"basePrice\": 8.0,\r\n        \"foodType\": \"PIZZA\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/recipe/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"recipe",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SaveRecipeErrors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhNDBlMTYwZi0yOTJhLTQxNzMtYWJlNC0xMDY3YmZiODBjZTciLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE4MzcxODUsImlhdCI6MTY3MTc1MDc4NX0.tuEZIKgqgDv7cYm6NYbXiEloUFJfw1vc0XrzsyXxocu3pj9FxFt0HCNPoKX1lXpJa0zDZ-_LSfbximfW2DWstQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"recipe\": {\r\n        \"name\": \"\",\r\n        \"baseToppings\": [1, 3, 5],\r\n        \"basePrice\": 8.0\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/recipe/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"recipe",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Recipe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhNDBlMTYwZi0yOTJhLTQxNzMtYWJlNC0xMDY3YmZiODBjZTciLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE4MzcxODUsImlhdCI6MTY3MTc1MDc4NX0.tuEZIKgqgDv7cYm6NYbXiEloUFJfw1vc0XrzsyXxocu3pj9FxFt0HCNPoKX1lXpJa0zDZ-_LSfbximfW2DWstQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/recipe/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"recipe",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetRecipes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5OWYwYTBjZi05ZDNjLTRmMjktOWExNi00YWEyZjNmZjM5ZmEiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE4NDE4MjksImlhdCI6MTY3MTc1NTQyOX0.aIf43LHlJMdQIVBPZgibHu5yMgBQh-4v2B3Y1s_0NMtE4Bm3wUy4KIB9ND8jH2SRui0Zn8lKVQ54s2UWBqu-kA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/recipe/menu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"recipe",
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddStores",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5OWYwYTBjZi05ZDNjLTRmMjktOWExNi00YWEyZjNmZjM5ZmEiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE4NDE4MjksImlhdCI6MTY3MTc1NTQyOX0.aIf43LHlJMdQIVBPZgibHu5yMgBQh-4v2B3Y1s_0NMtE4Bm3wUy4KIB9ND8jH2SRui0Zn8lKVQ54s2UWBqu-kA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"location\": \"2526BN\",\r\n    \"contact\": \"jjtaracan2@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/store/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"store",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetStores",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5OWYwYTBjZi05ZDNjLTRmMjktOWExNi00YWEyZjNmZjM5ZmEiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE4NDE4MjksImlhdCI6MTY3MTc1NTQyOX0.aIf43LHlJMdQIVBPZgibHu5yMgBQh-4v2B3Y1s_0NMtE4Bm3wUy4KIB9ND8jH2SRui0Zn8lKVQ54s2UWBqu-kA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/store/get_stores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"store",
+								"get_stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PlaceOrderWorks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5OWYwYTBjZi05ZDNjLTRmMjktOWExNi00YWEyZjNmZjM5ZmEiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE4NDE4MjksImlhdCI6MTY3MTc1NTQyOX0.aIf43LHlJMdQIVBPZgibHu5yMgBQh-4v2B3Y1s_0NMtE4Bm3wUy4KIB9ND8jH2SRui0Zn8lKVQ54s2UWBqu-kA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"foods\": [\r\n        {\r\n            \"recipeId\": 4,\r\n            \"baseIngredients\": [1],\r\n            \"extraIngredients\": []\r\n        }\r\n    ],\r\n    \"storeId\": 1,\r\n    \"userId\": \"99f0a0cf-9d3c-4f29-9a16-4aa2f3ff39fa\",\r\n    \"pickupTime\": \"2022-12-25 10:25:00\",\r\n    \"price\": 8.0,\r\n    \"couponIds\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/order/place",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"order",
+								"place"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditOrderWorks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5OWYwYTBjZi05ZDNjLTRmMjktOWExNi00YWEyZjNmZjM5ZmEiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE4NDE4MjksImlhdCI6MTY3MTc1NTQyOX0.aIf43LHlJMdQIVBPZgibHu5yMgBQh-4v2B3Y1s_0NMtE4Bm3wUy4KIB9ND8jH2SRui0Zn8lKVQ54s2UWBqu-kA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\": 2,\r\n    \"foods\": [],\r\n    \"storeId\": 1,\r\n    \"userId\": \"99f0a0cf-9d3c-4f29-9a16-4aa2f3ff39fa\",\r\n    \"pickupTime\": \"2022-12-25 10:25:00\",\r\n    \"price\": 0.0,\r\n    \"couponIds\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/order/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"order",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllOrders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5OWYwYTBjZi05ZDNjLTRmMjktOWExNi00YWEyZjNmZjM5ZmEiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE4NDE4MjksImlhdCI6MTY3MTc1NTQyOX0.aIf43LHlJMdQIVBPZgibHu5yMgBQh-4v2B3Y1s_0NMtE4Bm3wUy4KIB9ND8jH2SRui0Zn8lKVQ54s2UWBqu-kA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/order/listAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"order",
+								"listAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteOrderWorks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5OWYwYTBjZi05ZDNjLTRmMjktOWExNi00YWEyZjNmZjM5ZmEiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE4NDE4MjksImlhdCI6MTY3MTc1NTQyOX0.aIf43LHlJMdQIVBPZgibHu5yMgBQh-4v2B3Y1s_0NMtE4Bm3wUy4KIB9ND8jH2SRui0Zn8lKVQ54s2UWBqu-kA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/order/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"order",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PlaceOrderError",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhMDFhNWE3ZC04OWYzLTRlNTQtYTNhMS1iNjcwM2U5NTdkOGYiLCJyb2xlIjoiW1JPTEVfQ1VTVE9NRVJdIiwiZXhwIjoxNjcxOTA4NTAyLCJpYXQiOjE2NzE4MjIxMDJ9.KqzrNNsQpBzYjbm6CaRbrpSq7_kynmsP1qFKbpoFvA2ZhkGKXKsjbYvfT0KKsLggxABW4zUc53x1J3WENmTLug",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"foods\": [\n        {\n            \"recipeId\": 4,\n            \"baseIngredients\": [1],\n            \"extraIngredients\": []\n        }\n    ],\n    \"storeId\": 1,\n    \"userId\": \"a01a5a7d-89f3-4e54-a3a1-b6703e957d8f\",\n    \"pickupTime\": \"2022-12-25 10:25:00\",\n    \"price\": 4.0,\n    \"couponIds\": [\"percentage\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/order/place",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"order",
+								"place"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditOrder",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhNDBlMTYwZi0yOTJhLTQxNzMtYWJlNC0xMDY3YmZiODBjZTciLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE4MzcxODUsImlhdCI6MTY3MTc1MDc4NX0.tuEZIKgqgDv7cYm6NYbXiEloUFJfw1vc0XrzsyXxocu3pj9FxFt0HCNPoKX1lXpJa0zDZ-_LSfbximfW2DWstQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order\": {\n        \"foods\": [\n            {\n                \"baseRecipe\": 0,\n                \"baseIngredients\": [0],\n                \"extraIngredients\": [1]\n            },\n            {\n                \"baseRecipe\": 0,\n                \"baseIngredients\": [0],\n                \"extraIngredients\": []\n            }\n        ],\n        \"storeId\": 0,\n        \"userId\": \"a40e160f-292a-4173-abe4-1067bfb80ce7\",\n        \"pickupTime\": \"2022-12-25 11:00:00\",\n        \"price\": 13,\n        \"couponIds\": [\"percentege\", \"2for1\", \"inexistent\"]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/order/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"order",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteOrder",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhNDBlMTYwZi0yOTJhLTQxNzMtYWJlNC0xMDY3YmZiODBjZTciLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE4MzcxODUsImlhdCI6MTY3MTc1MDc4NX0.tuEZIKgqgDv7cYm6NYbXiEloUFJfw1vc0XrzsyXxocu3pj9FxFt0HCNPoKX1lXpJa0zDZ-_LSfbximfW2DWstQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderId\": 6\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/order/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"order",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"testUser\",\r\n    \"password\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"testUser\",\r\n    \"password\":\"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stores",
+			"item": [
+				{
+					"name": "Create Store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1NWY3NjUxZS0xNjk2LTQ1ZGYtOTc5NC04MDUzMjM4YzNmZjAiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE5MDY2OTEsImlhdCI6MTY3MTgyMDI5MX0.BPOdWIorRA5_ZyU0LZaPM_fCeO1rksazJbpdJUIr3lIOCPDRehpA2CcIecqOqXrF6-JQv1PMu_VY2f76xyIRJw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"location\":\"1234AB\",\r\n    \"contact\":\"tomsfighter@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/store/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"store",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1NWY3NjUxZS0xNjk2LTQ1ZGYtOTc5NC04MDUzMjM4YzNmZjAiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE5MDY2OTEsImlhdCI6MTY3MTgyMDI5MX0.BPOdWIorRA5_ZyU0LZaPM_fCeO1rksazJbpdJUIr3lIOCPDRehpA2CcIecqOqXrF6-JQv1PMu_VY2f76xyIRJw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"location\":\"5678CD\",\r\n    \"contact\":\"differentEmailStore@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/store/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"store",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List stores",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1NWY3NjUxZS0xNjk2LTQ1ZGYtOTc5NC04MDUzMjM4YzNmZjAiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE5MDY2OTEsImlhdCI6MTY3MTgyMDI5MX0.BPOdWIorRA5_ZyU0LZaPM_fCeO1rksazJbpdJUIr3lIOCPDRehpA2CcIecqOqXrF6-JQv1PMu_VY2f76xyIRJw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/store/get_stores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"store",
+								"get_stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5YjA3ZmFjMS0zNTExLTQyOTItOGExYi02MTkzYTc0Njk3NWYiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE4Mzc4MzIsImlhdCI6MTY3MTc1MTQzMn0.ZB6HsVHpiSKSQEwMGnPsmWrD8k9vODIggeWqk9Y2bHYTD_pXkvFfozyypjkA9C9ho99oVBmYMccuJg8tnQni6g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/store/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"store",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Recipe",
+			"item": [
+				{
+					"name": "SaveRecipe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1NWY3NjUxZS0xNjk2LTQ1ZGYtOTc5NC04MDUzMjM4YzNmZjAiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE5MDY2OTEsImlhdCI6MTY3MTgyMDI5MX0.BPOdWIorRA5_ZyU0LZaPM_fCeO1rksazJbpdJUIr3lIOCPDRehpA2CcIecqOqXrF6-JQv1PMu_VY2f76xyIRJw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"recipe\": {\n        \"name\": \"no_lactose_margherita\",\n        \"baseToppings\": [2],\n        \"basePrice\": 8.0\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/recipe/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"recipe",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateRecipe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1NWY3NjUxZS0xNjk2LTQ1ZGYtOTc5NC04MDUzMjM4YzNmZjAiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE5MDY2OTEsImlhdCI6MTY3MTgyMDI5MX0.BPOdWIorRA5_ZyU0LZaPM_fCeO1rksazJbpdJUIr3lIOCPDRehpA2CcIecqOqXrF6-JQv1PMu_VY2f76xyIRJw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":3,\n    \"recipe\": {\n        \"name\": \"test\",\n        \"baseToppings\": [2],\n        \"basePrice\": 8.0\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/recipe/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"recipe",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteRecipe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1NWY3NjUxZS0xNjk2LTQ1ZGYtOTc5NC04MDUzMjM4YzNmZjAiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE5MDY2OTEsImlhdCI6MTY3MTgyMDI5MX0.BPOdWIorRA5_ZyU0LZaPM_fCeO1rksazJbpdJUIr3lIOCPDRehpA2CcIecqOqXrF6-JQv1PMu_VY2f76xyIRJw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/recipe/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"recipe",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menu",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/recipe/menu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"recipe",
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetIngredients",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"recipeId\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/recipe/getBaseToppings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"recipe",
+								"getBaseToppings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Allergies",
+			"item": [
+				{
+					"name": "Filter Menu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNWRhMGFkZS03Yzg1LTQ5M2ItYWNkZC0yOGM5ZWE2Y2ZjNjEiLCJyb2xlIjoiW1JPTEVfQ1VTVE9NRVJdIiwiZXhwIjoxNjcxOTA2OTI1LCJpYXQiOjE2NzE4MjA1MjV9.5lEsCUEGMnyUMyj9sTh4EpgTghJVB5Uo1FkSknlx-EOuzU_oczvBWk-AWShKDB_b4U7ylgsBByHEQUiGG48MsA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/allergens/menu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"allergens",
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Warn User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNWRhMGFkZS03Yzg1LTQ5M2ItYWNkZC0yOGM5ZWE2Y2ZjNjEiLCJyb2xlIjoiW1JPTEVfQ1VTVE9NRVJdIiwiZXhwIjoxNjcxOTA2OTI1LCJpYXQiOjE2NzE4MjA1MjV9.5lEsCUEGMnyUMyj9sTh4EpgTghJVB5Uo1FkSknlx-EOuzU_oczvBWk-AWShKDB_b4U7ylgsBByHEQUiGG48MsA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/allergens/warn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"allergens",
+								"warn"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "CreateUser",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"test2@abv.bg\",\n    \"allergies\":[\"Allergy1\", \"Allergy2\"],\n    \"name\":\"Borislav\",\n    \"password\":\"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/user/create_user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"create_user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"test2@abv.bg\",\n    \"password\":\"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNDA0MzkwNC0zNDlmLTRlMWMtOTY0OC1mYzE2YzBkMDY4OTciLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE0NTY4NTUsImlhdCI6MTY3MTM3MDQ1NX0.DJtZMf0k00mCt3qh5OhRObwSnJcpoIoubGpzpzKdo2D45mawSFHyElkTccgv22u7M1_cl3HotnE6lba2vAUrkw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/user/delete_user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"delete_user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllergies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmZWE3YmZiNS0wZmM1LTQ4MTMtOWQwMC04ZDBiZDkzMThiMWIiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzEwMjcxOTgsImlhdCI6MTY3MDk0MDc5OH0.pf-1ot3akLZGXbf2crPyH2tDaYbOcQRUVpFyZ-SEgaGjC32PGfkjebYRF8yZeT_Gpd4B3cNZgYKYrgXAVmXf2A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/user/get_allergies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"get_allergies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAllergies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlOGZlNmUxYy03ZGZiLTQ2ZDctOTQwMy1mNTQ0NGU1MWQyZjAiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE0NjEzMzcsImlhdCI6MTY3MTM3NDkzN30.rTy11yH6cH8Ms72ZSQGdfYOEUTWcnkq6HCNN9zPM2VlJsmXs43zLXJtB__KCSpjGMtlZa0DF8LEwjY5xX4i5VA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"allergies\":[\"Allergy1\", \"Allergy2\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/user/update_allergies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"update_allergies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginManager",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"managerEmail@gmail.com\",\n    \"password\":\"pass1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Coupons",
+			"item": [
+				{
+					"name": "CreateCouponTwoForOne",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1NWY3NjUxZS0xNjk2LTQ1ZGYtOTc5NC04MDUzMjM4YzNmZjAiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE5MDY2OTEsImlhdCI6MTY3MTgyMDI5MX0.BPOdWIorRA5_ZyU0LZaPM_fCeO1rksazJbpdJUIr3lIOCPDRehpA2CcIecqOqXrF6-JQv1PMu_VY2f76xyIRJw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"Example Token\",\n    \"type\":\"TWO_FOR_ONE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/coupon/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"coupon",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCouponPercentage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1NWY3NjUxZS0xNjk2LTQ1ZGYtOTc5NC04MDUzMjM4YzNmZjAiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE5MDY2OTEsImlhdCI6MTY3MTgyMDI5MX0.BPOdWIorRA5_ZyU0LZaPM_fCeO1rksazJbpdJUIr3lIOCPDRehpA2CcIecqOqXrF6-JQv1PMu_VY2f76xyIRJw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"percentage\",\n    \"type\":\"PERCENTAGE\",\n    \"percentage\":0.5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/coupon/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"coupon",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "PlaceOrder",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNWRhMGFkZS03Yzg1LTQ5M2ItYWNkZC0yOGM5ZWE2Y2ZjNjEiLCJyb2xlIjoiW1JPTEVfQ1VTVE9NRVJdIiwiZXhwIjoxNjcxOTA2OTI1LCJpYXQiOjE2NzE4MjA1MjV9.5lEsCUEGMnyUMyj9sTh4EpgTghJVB5Uo1FkSknlx-EOuzU_oczvBWk-AWShKDB_b4U7ylgsBByHEQUiGG48MsA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"foods\": [\n        {\n            \"recipeId\": 4,\n            \"baseIngredients\": [2],\n            \"extraIngredients\": []\n        }\n    ],\n    \"storeId\": 2,\n    \"userId\": \"25da0ade-7c85-493b-acdd-28c9ea6cfc61\",\n    \"pickupTime\": \"2022-12-25 10:25:00\",\n    \"price\": 8.0,\n    \"couponIds\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/order/place",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"order",
+								"place"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditOrder",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNWRhMGFkZS03Yzg1LTQ5M2ItYWNkZC0yOGM5ZWE2Y2ZjNjEiLCJyb2xlIjoiW1JPTEVfQ1VTVE9NRVJdIiwiZXhwIjoxNjcxOTA2OTI1LCJpYXQiOjE2NzE4MjA1MjV9.5lEsCUEGMnyUMyj9sTh4EpgTghJVB5Uo1FkSknlx-EOuzU_oczvBWk-AWShKDB_b4U7ylgsBByHEQUiGG48MsA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderId\": 3,\n    \"foods\": [\n        {\n            \"id\": 4,\n            \"recipeId\": 4,\n            \"baseIngredients\": [\n                2\n            ],\n            \"extraIngredients\": []\n        }\n    ],\n    \"storeId\": 2,\n    \"userId\": \"25da0ade-7c85-493b-acdd-28c9ea6cfc61\",\n    \"pickupTime\": \"2023-12-25 10:25:00\",\n    \"price\": 8.0,\n    \"couponIds\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/order/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"order",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteOrder",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNWRhMGFkZS03Yzg1LTQ5M2ItYWNkZC0yOGM5ZWE2Y2ZjNjEiLCJyb2xlIjoiW1JPTEVfQ1VTVE9NRVJdIiwiZXhwIjoxNjcxOTA2OTI1LCJpYXQiOjE2NzE4MjA1MjV9.5lEsCUEGMnyUMyj9sTh4EpgTghJVB5Uo1FkSknlx-EOuzU_oczvBWk-AWShKDB_b4U7ylgsBByHEQUiGG48MsA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderId\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/order/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"order",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListOrder",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyNWRhMGFkZS03Yzg1LTQ5M2ItYWNkZC0yOGM5ZWE2Y2ZjNjEiLCJyb2xlIjoiW1JPTEVfQ1VTVE9NRVJdIiwiZXhwIjoxNjcxOTA2OTI1LCJpYXQiOjE2NzE4MjA1MjV9.5lEsCUEGMnyUMyj9sTh4EpgTghJVB5Uo1FkSknlx-EOuzU_oczvBWk-AWShKDB_b4U7ylgsBByHEQUiGG48MsA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/order/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"order",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListAllOrder",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1NWY3NjUxZS0xNjk2LTQ1ZGYtOTc5NC04MDUzMjM4YzNmZjAiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE5MDY2OTEsImlhdCI6MTY3MTgyMDI5MX0.BPOdWIorRA5_ZyU0LZaPM_fCeO1rksazJbpdJUIr3lIOCPDRehpA2CcIecqOqXrF6-JQv1PMu_VY2f76xyIRJw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderId\": 3,\n    \"foods\": [\n        {\n            \"id\": 4,\n            \"recipeId\": 5,\n            \"baseIngredients\": [\n                3\n            ],\n            \"extraIngredients\": []\n        }\n    ],\n    \"storeId\": 2,\n    \"userId\": \"91c6bfff-a5c7-4371-9861-cf7d32bb81e9\",\n    \"pickupTime\": \"2023-12-25 10:25:00\",\n    \"price\": 8.0,\n    \"couponIds\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/order/listAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"order",
+								"listAll"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ingredients",
+			"item": [
+				{
+					"name": "SaveIngredient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1NWY3NjUxZS0xNjk2LTQ1ZGYtOTc5NC04MDUzMjM4YzNmZjAiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE5MDY2OTEsImlhdCI6MTY3MTgyMDI5MX0.BPOdWIorRA5_ZyU0LZaPM_fCeO1rksazJbpdJUIr3lIOCPDRehpA2CcIecqOqXrF6-JQv1PMu_VY2f76xyIRJw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ingredient\" : {\n        \"name\" : \"black_olive\",\n        \"price\": 0.5,\n        \"allergens\":[]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/ingredient/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"ingredient",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateIngredient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1NWY3NjUxZS0xNjk2LTQ1ZGYtOTc5NC04MDUzMjM4YzNmZjAiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE5MDY2OTEsImlhdCI6MTY3MTgyMDI5MX0.BPOdWIorRA5_ZyU0LZaPM_fCeO1rksazJbpdJUIr3lIOCPDRehpA2CcIecqOqXrF6-JQv1PMu_VY2f76xyIRJw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"ingredient\" : {\n        \"name\" : \"tomato\",\n        \"price\": 0.5,\n        \"allergens\":[]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/ingredient/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"ingredient",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteIngredient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1NWY3NjUxZS0xNjk2LTQ1ZGYtOTc5NC04MDUzMjM4YzNmZjAiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE5MDY2OTEsImlhdCI6MTY3MTgyMDI5MX0.BPOdWIorRA5_ZyU0LZaPM_fCeO1rksazJbpdJUIr3lIOCPDRehpA2CcIecqOqXrF6-JQv1PMu_VY2f76xyIRJw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/ingredient/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"ingredient",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "extraToppingsIngredient",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1NWY3NjUxZS0xNjk2LTQ1ZGYtOTc5NC04MDUzMjM4YzNmZjAiLCJyb2xlIjoiW1JPTEVfTUFOQUdFUl0iLCJleHAiOjE2NzE5MDY2OTEsImlhdCI6MTY3MTgyMDI5MX0.BPOdWIorRA5_ZyU0LZaPM_fCeO1rksazJbpdJUIr3lIOCPDRehpA2CcIecqOqXrF6-JQv1PMu_VY2f76xyIRJw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/ingredient/extraToppings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"ingredient",
+								"extraToppings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Price",
+			"item": [
+				{
+					"name": "idsPrice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"foodsIds\":[],\n    \"ingredientIds\":[2]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/price/ids",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"price",
+								"ids"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
